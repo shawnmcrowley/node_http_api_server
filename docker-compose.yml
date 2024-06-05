@@ -1,0 +1,12 @@
+services:
+  node_server:
+    image: node
+    container_name: node_server
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    volumes:
+      - data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+volumes:
+      data:
